@@ -132,3 +132,10 @@ function append_modal(el){
     modal.append(img,notes);
     blog_modal.style.display = 'block';
 }
+
+import navbar from '../components/nav.js'
+import foot from '../components/foot.js'
+let navBtn = document.getElementById('blog_navbar')
+navBtn.innerHTML=navbar()
+let footer_btn = document.getElementById('footer_btn')
+footer_btn.innerHTML=foot()

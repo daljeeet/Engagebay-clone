@@ -32,7 +32,7 @@ logo.addEventListener('mouseover',function(){
     dropdown_div.style.display = 'none'
 })
 logo.addEventListener('click',function(){
-    window.location.reload()
+    window.location.href='../landing_page/index.html'
 })
 
 // resources button hover functions 
@@ -151,6 +151,9 @@ freeToolBtn.addEventListener('mouseover',function(){
     dropdown_div.style.display = 'flex'
 })
 let blog_btn = document.getElementById('nav_blog')
+blog_btn.onclick = function(){
+    window.location.href = '../blog/blog.html'
+}
 blog_btn.addEventListener("mouseover",function(){
     hideProd_div()
     hideRes_div()
@@ -160,9 +163,16 @@ blog_btn.addEventListener("mouseover",function(){
 
 
 let login_btn = document.getElementById('nav_login')
+login_btn.onclick=function(){
+    window.location.href='../login/login.html'
+}
 login_btn.addEventListener('mouseover',function(){
     hideProd_div()
     hideRes_div()
     dropdown_div.style.display = 'none'
 })
 
+let pricing_btn = document.getElementById('nav_pricing')
+pricing_btn.onclick=function(){
+window.location.href='../pricing_page/pricing.html'
+}

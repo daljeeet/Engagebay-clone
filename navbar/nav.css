@@ -5,10 +5,11 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: rgb(65, 65, 65);
 }
 
 #nav {
+    color: rgb(65, 65, 65);
+    top: 0;
     display: flex;
     height: 80px;
     position: fixed;
@@ -91,7 +92,7 @@
 }
 
 #on_prod_hover {
-    position: absolute;
+    position: fixed;
     width: 100%;
     overflow-y: auto;
     left: 0;
@@ -100,6 +101,7 @@
     background-color: whitesmoke;
     display: none;
     animation: apppend-div .2s linear;
+    z-index: 100;
 }
 
 @keyframes apppend-div {
@@ -264,15 +266,16 @@
 /* resources div on hover properties  */
 
 #on_resources_hover {
-    position: absolute;
+    position: fixed;
     width: 100%;
     overflow-y: auto;
     left: 0;
     top: 60px;
     padding: 40px 80px;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     display: none;
     animation: show-div .2s linear;
+    z-index: 100;
 }
 
 @keyframes show-div {

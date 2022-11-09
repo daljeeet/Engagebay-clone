@@ -122,9 +122,13 @@ div_give.append(heads,ulist)
 }
 
 
+import navbar from '../../components/nav.js'
+import foot from '../../components/foot.js'
+let nav_div = document.getElementById("navbar")
+nav_div.innerHTML=navbar()
+let footer_div = document.getElementById('footer_div')
 
-
-
+footer_div.innerHTML=foot()
 
 
 
