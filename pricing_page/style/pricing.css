@@ -1,0 +1,311 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#top_section{
+    margin-top: 80px;
+    padding: 40px 40px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-family: "noto sans";
+    font-weight: 00;
+}
+#button_div{
+    background-color:white;
+}
+#heading{
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+#intro{
+    font-size: 23px;
+    margin: 15px auto 50px auto;
+}
+#button_div{
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding:15px ;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#button_div button{
+    background-color: transparent;
+    border-radius:50px ;
+    border: none;
+    padding: 20px;
+}
+.tob_btn_first_p{
+    color: #4E44E6;
+    font-size: 18px;
+    font-weight: 450;
+    font-family: "Roboto";
+    margin: 0px;
+}
+.tob_btn_first_p+p{
+    margin-top: 10px;
+    color: #4E44E6;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#button_div #all_in_one{
+    background-color: #D7E2FE;
+}
+#duration_button{
+    background-color: #37C1F9;
+    width: fit-content;
+    margin: auto;
+    border-radius: 50px;
+    margin-top: -30px;
+    display: flex;
+}
+#duration_button button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-family: "Roboto";
+    font-weight: 500;
+    padding: 15px 50px;
+    border-radius: 50px;
+}
+#duration_button #Monthly{
+    background-color: white;
+    color: #4E44E6;
+}
+
+/* pricing div start from here  */
+#first_pricing_div{
+width: 85%;
+margin: auto;
+margin-top: 50px;
+height:auto;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 15px;
+height: fit-content;
+}
+#first_pricing_div>div{
+    background-color:#e7f9ff ;
+    height: auto;
+    border-radius: 5px;
+    padding: 30px 0px;
+}
+#first_pricing_div #gold{
+    background-color: #f5fddb;
+}
+#first_pricing_div>div{
+   display: grid;
+}
+
+/* gold div have separate CSS */
+#first_pricing_div>#three{
+    background-color: #f5fddb;
+}
+
+/* children div of first_pricing_div have grand div on top  */
+#first_pricing_div>div .show_worth{   
+    width: fit-content;
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #3a2d30;
+    font-size: 12px !important; 
+    font-size: 500px;
+    font-family: "Roboto";
+    font-weight: 500;
+    background-color: #c6e0f6;
+    
+}
+#first_pricing_div #gold_growth{
+    color: #425954;
+}
+#first_pricing_div>div .center{
+    text-align: center;
+    color: #0050af;
+    text-align: center;
+    font-size: 15px;
+}
+#gold_growth{
+    color: #3a2d30 !important;
+    background: #e4f3b3 !important;
+}
+.actual_price1 p{
+    font-size: 25px !important;
+    margin: 30px 0px 10px 0px !important;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    font-family: "Quicksand";
+}
+#first_pricing_div #gold .center{
+    color: #9bb43a;
+}
+.month{
+    font-family: "Roboto";
+    font-weight: 300;
+}
+/* list icon div  */
+.red{
+    background-color:#c5e5ff;
+    width: fit-content;
+    border-radius: 50%;
+    padding: 2px 2px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    display: inline;
+    margin-right: 10px;
+}
+
+#first_pricing_div .actual_price span{
+    font-size: 61px;
+    margin-top: -10px;
+    font-family: sans-serif;
+}
+#gold i{
+    color: #a4ba4e;
+}
+.gold{
+    background-color:#e7eece;
+}
+/* first_pricing_div inside that we have four div(direct)  inside each div unordered list  */
+ul{
+    margin-top: 50px;
+}
+
+/* each direct children div of first_pricing_div inside ul  */
+li{
+    list-style: none;
+    margin-bottom: 20px;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#first_pricing_div button{
+    font-size: 15px;
+    color: white;
+    background-color: #20bdee;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#first_pricing_div button i{
+    margin-left: 20px;
+}
+
+#first_pricing_div>div>div+div{
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0 !important ;
+}
+
+#batch_container{
+    height: auto;
+    margin-top: 50px;
+    background-color: #0050af;
+    color: white;
+    width: 100%;
+    padding: 65px 0px;
+}
+#batch_container h2{
+    text-align: center;
+    font-family: "Roboto";
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 23px;
+}
+#child_batch_id{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin:auto;
+    gap: 50px;
+}
+#comapre_plans{
+    text-align: center;
+    font-family: "Noto Sans Limbu";
+}
+#comapre_plans p{
+   font-weight: 600;
+   font-size: 38px;
+   margin-bottom: 0px;
+}
+#comapre_plans p+p{
+    font-size: 20px;
+    font-weight: 300;
+    color: #817780;
+    margin-top: 10px;
+}
+
+#compare_plan_div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 85%;
+    margin: auto;
+}
+#compare_plan_div>div{
+    height: fit-content;
+}
+#compare_plan_div>div{
+    display:grid;
+}
+.worth_second_div{
+    font-size: 14px;
+    color: #262626;
+    font-weight: 500;
+}
+.amount_second_div{
+    font-size: 28px;
+    color: #0050AF;
+    font-weight: 550;
+}
+.month_second_div{
+    font-size: 14px;
+    color: #262626;
+}
+#compare_plan_div>div>div:nth-child(1)>p{
+margin: 10px;
+}
+
+
+#compare_plan_div>div>div:nth-child(1){
+    text-align: center;
+    background-color:#CEF1FC;
+    font-family: "Quicksand";
+}
+#compare_plan_div>div>div:nth-child(2){
+background-color: #e7f9ff;
+overflow-y: scroll;
+}
+#compare_plan_div>div>div:nth-child(2) p{
+display: inline;
+
+}
+#compare_plan_div .list_names{
+font-size: 17px;
+margin-left: 30px;
+color: #0050AF;
+font-family:"Quicksand" ;
+font-weight: 600;
+}
+#compare_plan_div ul>li>p{
+    font-size: 13px
+}
+
+
