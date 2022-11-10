@@ -460,6 +460,11 @@
   cursor: pointer;
 }
 
+#marque{
+    width: 100%;
+    overflow: hidden;
+}
+
 #butn button:hover{
   background-color: rgb(121,82,188);
   color: white;
