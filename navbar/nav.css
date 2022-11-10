@@ -94,7 +94,6 @@
 #on_prod_hover {
     position: fixed;
     width: 100%;
-    overflow-y: auto;
     left: 0;
     top: 60px;
     padding: 40px 80px;
@@ -102,6 +101,7 @@
     display: none;
     animation: apppend-div .2s linear;
     z-index: 100;
+    height: 95vh;
 }
 
 @keyframes apppend-div {
@@ -114,8 +114,12 @@
 }
 
 #on_prod_hover_content {
+    overflow: scroll;
+    position: relative;
     display: flex;
+    height: 100%;
     justify-content: space-between;
+    background-color: whitesmoke;
 }
 
 #on_prod_hover_content>div {
@@ -276,6 +280,7 @@
     display: none;
     animation: show-div .2s linear;
     z-index: 100;
+    height: 90vh;
 }
 
 @keyframes show-div {
@@ -338,8 +343,9 @@
     justify-content: space-between;
     overflow-y: auto;
     top: 30px;
-    animation: show-div 0.5s linear;
+    animation: show-div 0.2s linear;
     display: none;
+    transition-duration: 0.2s;
 }
 
 #free_tools_hover>p {
