@@ -8,12 +8,18 @@
 <!-- SLIDER LINKS -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!--  -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+Limbu:regular" rel="stylesheet" />
+<!-- EXTERNAL FONT  -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+Limbu:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700" rel="stylesheet" />
-    <link rel="stylesheet" href="./style/pricing.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/4bea23e3dd.js" crossorigin="anonymous"></script>
+    <!--  -->
+<!-- ICONS -->
+<script src="https://kit.fontawesome.com/4bea23e3dd.js" crossorigin="anonymous"></script>
+<!--  -->
+
+ <link rel="stylesheet" href="pricing_page.css">
+
 </head>
 <body>
     <!-- top section div -->
@@ -25,7 +31,7 @@
         <button id="all_in_one"><p class="tob_btn_first_p">All-in-One</p><p>Starts at $ 11.99 USD</p></button>
         <button><p class="tob_btn_first_p">Marketing</p><p>Starts at $ 10.39 USD</p></button>
         <button><p class="tob_btn_first_p">CRM & Sales Bay</p><p>Starts at $ 10.39 USD</p></button>
-        <button><p class="tob_btn_first_p">Service Bay</p><p>Free Help Desk</p></button>
+        <button id="service_bay"><p class="tob_btn_first_p">Service Bay</p><p>Free Help Desk</p></button>
       </div>
     </div>
     <!-- duration button -> when the user click on any button below price amount will change -->
@@ -34,6 +40,16 @@
 <button id="Yearly">Yearly (10% Off)</button>
 <button id="Biennial">Biennial (20% Off)</button>
     </div>
+
+<div id="service_bay_div">
+  <p>Service Bay</p>
+  <p>Free Help Desk & Free Live Chat for support teams</p>
+  <a href="#">
+<button>FREE FOREVER <span><i class="fa-solid fa-arrow-right-long"></i></span></button>
+  </a> 
+  <p>No credit card required.</p>
+</div>
+
 
     <!-- first pricing div which have 4 child div and inside that div we have a list of features according to given price -->
     <div id="first_pricing_div">
@@ -63,6 +79,8 @@
   <p>to help find the perfect fit</p>
 </div>
 
+
+
 <div id="compare_plan_div">
 <div id="number_one"></div>
 <div id="number_two"></div>
@@ -70,20 +88,40 @@
 <div id="number_four"></div>
 </div>
 
-<p class="worth_second_div"></p>
-<p class="amount_second_div"></p>
-<p class="month_second_div"></p>
+
+<div id="all_in_one1">
+  <div id="name"><p>Simplify Marketing, Sales, & Support with the best free</p><p id="one_all">All-In-One CRM software</p></div>
+
+<div id="input"><input type="email" placeholder="Your email address"><button>Get Started</button></div>
+
+<div id="required"><div><i class="fa-solid fa-circle-check"></i><p>Free for 15 users</p></div><div>
+  <i class="fa-solid fa-circle-check">
+</i><p>No credit card required</p></div></div>
+</div>
+
+<div id="review">
+<div id="image">
+  <img src="https://cdn5.engagebay.com/new/assets/img/lilahbulock.webp" alt="">
+</div>
+<div id="content">
+  <p id="pera1">Engagebay has got to be the most powerful all-in-one tool for small businesses you just dont get this level of features with many tools(and trust me when i say i tried so many) its even difficult to calculate how many essential business tools and software your effectively replacing with just one software</p>
+  <p>Lilach Bullock</p>
+  <p>Business Coach | International Speaker | Top Women Social Media Influencer</p>
+</div>
+
+</div>
+
 
 
 
 </body>
 </html>
-<script src="/pricing_page/script/pricing.js"></script>
+<script src="pricing_page.js"></script>
         <!-- SLIDER FUNCTIONALITY -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
         AOS.init({
-            offset: 300,
+            offset: 10,
             duration: 1000,
         });
         </script>
