@@ -164,7 +164,7 @@ blog_btn.addEventListener("mouseover",function(){
 
 let login_btn = document.getElementById('nav_login')
 login_btn.onclick=function(){
-    window.location.href='../login/login.html'
+    window.location.href='../auth/login.html'
 }
 login_btn.addEventListener('mouseover',function(){
     hideProd_div()
@@ -176,3 +176,21 @@ let pricing_btn = document.getElementById('nav_pricing')
 pricing_btn.onclick=function(){
 window.location.href='../pricing_page/pricing.html'
 }
+
+let freeDemoBtn = document.getElementById('nav_free_demo')
+freeDemoBtn.onclick=function(){
+    window.location.href = '../auth/signup.html'
+}
+
+let signupBtn = document.getElementById('nav_free_signup_btn')
+signupBtn.onclick = function(){
+    window.location.href = '../auth/signup.html'
+}
+
+// indexPg = document.getElementById('display')
+// console.log(indexPg)
+// indexPg.addEventListener('mouseover',function(){
+//     hideProd_div()
+//     hideRes_div()
+//     dropdown_div.style.display = 'none'
+// })

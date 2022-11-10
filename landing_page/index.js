@@ -22,3 +22,10 @@ AOS.init({
   navbar.innerHTML=nav()
   let footer = document.getElementById('footer_sec')
   footer.innerHTML= foot()
+
+  let indexPg = document.getElementById('display')
+  let drpdown = document.getElementById('free_tools_hover')
+ indexPg.addEventListener('mouseover',function(){
+   drpdown.style.display = 'none'
+
+ })
