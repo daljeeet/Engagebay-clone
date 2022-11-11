@@ -5,16 +5,16 @@ function navbar(){
             <img src="https://www.engagebay.com/new/assets/img/engagebay-logo.svg" alt="Logo">
         </div>
         <div id="nav_list">
-            <div id="nav_products">Products <span id="down_arrow"> <svg width="10" height="10" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L5.62763 8.29741C6.41918 9.54563 8.24454 9.53362 9.0196 8.2751L13.5 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                </svg> </span></div>
+            <div id="nav_products">Products <span class="down_arrow"> <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L6.3802 7L11 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg></span></div>
             <div id="nav_pricing">Pricing</div>
-            <div id="nav_resources">Resources <span><svg width="10" height="10" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L5.62763 8.29741C6.41918 9.54563 8.24454 9.53362 9.0196 8.2751L13.5 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                </svg> </span> </div>
-            <div id="nav_free_tools">Free Tools <span> <svg width="10" height="10" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L5.62763 8.29741C6.41918 9.54563 8.24454 9.53362 9.0196 8.2751L13.5 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                </svg></span>
+            <div id="nav_resources">Resources <span class='down_arrow'><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L6.3802 7L11 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg> </span> </div>
+            <div id="nav_free_tools">Free Tools <span class='down_arrow'> <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L6.3802 7L11 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg></span>
                 <div id="free_tools_hover">
                     <p>UTM Builder</p>
                     <p>Email Signature</p>
@@ -297,7 +297,7 @@ function navbar(){
                     </div>
                     <div class="compare_plans_div">
                         <img src="../images/setting.png" alt="Compare all plans div">
-                        <div id="cmpre_plans">Compare all Plans <span id="for_arrow">&#8594</span> </div>
+                        <div id="cmpre_plans_r">Compare all Plans <span id="for_arrow">&#8594</span> </div>
                     </div>
                 </div>
             </div>

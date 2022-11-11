@@ -72,7 +72,7 @@ function loginStatus(dta,username){
         localStorage.setItem('tkn',dta.token);
         localStorage.setItem('username',username);
         console.log(dta)
-        // window.location.href = ''
+        window.location.href = '../marketing/marketing.html'
     }
 }
 

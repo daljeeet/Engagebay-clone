@@ -1,3 +1,9 @@
+import navbar from '../components/nav.js'
+import foot from '../components/foot.js'
+let navBtn = document.getElementById('blog_navbar')
+navBtn.innerHTML=navbar()
+let footer_btn = document.getElementById('footer_btn')
+footer_btn.innerHTML=foot()
 let blog_modal = document.querySelector('.blog_modal');
 
 // let closeBtn = document.querySelector('.close_btn');
@@ -206,9 +212,12 @@ function append_modal(el){
     blog_modal.style.display = 'block';
 }
 
-import navbar from '../components/nav.js'
-import foot from '../components/foot.js'
-let navBtn = document.getElementById('blog_navbar')
-navBtn.innerHTML=navbar()
-let footer_btn = document.getElementById('footer_btn')
-footer_btn.innerHTML=foot()
+ 
+let cmpre1 = document.getElementById('cmpre_plans')
+cmpre1.onclick= function(){
+    window.location.href='../pricing_page/pricing.html'
+}
+let cmpre2 = document.getElementById('cmpre_plans_r')
+cmpre2.onclick=function(){
+  window.location.href = '../pricing_page/pricing.html'
+}

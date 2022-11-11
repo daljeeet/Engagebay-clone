@@ -1,5 +1,9 @@
-
-
+import navbar from '../../components/nav.js'
+import foot from '../../components/foot.js'
+let nav_div = document.getElementById("navbar")
+nav_div.innerHTML=navbar()
+let footer_div = document.getElementById('footer_div')
+footer_div.innerHTML=foot()
 let div1=document.getElementById("one")
 let div2=document.getElementById("two")
 let div4=document.getElementById("four")
@@ -120,47 +124,6 @@ ulist.append(li)
 }
 div_give.append(heads,ulist)
 }
-
-
-import navbar from '../../components/nav.js'
-import foot from '../../components/foot.js'
-let nav_div = document.getElementById("navbar")
-nav_div.innerHTML=navbar()
-let footer_div = document.getElementById('footer_div')
-
-footer_div.innerHTML=foot()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ############// "Marketing",// ############
 let marketing=["Marketing","250 Contacts","1,000 Branded Emails","Lists","Segmentation","Predictive Lead Score","Embed Forms","Web Pop ups","Email Templates","Email Template Builder","Auto Responders","Tag Management","Social Suite","Integrations","Reporting Dashboard","Custom Fields","Live Chat","Video Marketing","Facebook Ads","Desktop Notifications","Landing Pages","Landing Page Builder","SSL Enabled for Landing Pages","Send Newsletters","Email Broadcast","Email Sequences","500 MB File Storage","Marketing Automation","Site Messaging","Web Rules","Push Notifications","Email Broadcast A/B Testing","Automations/Workflows","Nodes (Automation/Workflow)","Triggers","Code your own Landing Page","Landing Page A/B Testing","Custom Domain for Landing Pages","Timezone based email delivery","Conversational Inbox","Web Analytics","Custom Reporting",
 "Role Management"]
@@ -235,6 +198,12 @@ div_one.append(d1, d2, d3)
 let div_two=document.getElementById("number_two")
 let arr_divs=[div_one,div_two]
 
-
-
-
+ 
+let cmpre1 = document.getElementById('cmpre_plans')
+cmpre1.onclick= function(){
+    window.location.href='../pricing_page/pricing.html'
+}
+let cmpre2 = document.getElementById('cmpre_plans_r')
+cmpre2.onclick=function(){
+  window.location.href = '../pricing_page/pricing.html'
+}
