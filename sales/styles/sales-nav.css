@@ -5,6 +5,7 @@
 }
 #sales_navbar{
     display: flex;
+    justify-content: space-evenly;
     height: 50px;
     top: 0;
     z-index: 100;
@@ -33,3 +34,18 @@
     border-radius: 5px;
     padding: 5px;
 } 
+
+
+#loginNav-right{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#loginNav-right i{
+    margin: auto 25px;
+}
+#loginNav-right img{
+    height: 30px;
+    margin-left: 20px;
+}
