@@ -1,4 +1,4 @@
-function login_nav(){
+export default function(){
     return `<i class="fa-solid fa-magnifying-glass"></i>
     <i class="fa-solid fa-plus"></i>
     <i class="fa-solid fa-phone"></i>
@@ -40,5 +40,5 @@ function login_nav(){
     </div>`
 }
 
-export {login_nav};
+
 
