@@ -9,6 +9,14 @@ function sales_nav(){
     <div>Automations</div>
     <div><a href="../sales_calendar/sales-cal.html">Calendar</a></div>
     <div><i class="fa-sharp fa-solid fa-ellipsis"></i></div>
+</div>
+
+
+<div id="loginNav-right">
+<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-plus"></i>
+<i class="fa-solid fa-phone"></i>
+<img src="https://cdn-icons-png.flaticon.com/512/3747/3747308.png" alt="">
 </div>`
 }
 
