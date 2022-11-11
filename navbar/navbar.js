@@ -130,7 +130,7 @@ allBtns.forEach((btn,id)=>{
 function show_content(btn,index){
 alldivs.forEach((el,id)=>{
 if(id===index){
-    el.style.color = 'blue'
+    // el.style.color = 'blue'
     btn.style.backgroundColor = '#e1e1ff'
     el.style.display='block'
 }else{
@@ -186,11 +186,3 @@ let signupBtn = document.getElementById('nav_free_signup_btn')
 signupBtn.onclick = function(){
     window.location.href = '../auth/signup.html'
 }
-
-// indexPg = document.getElementById('display')
-// console.log(indexPg)
-// indexPg.addEventListener('mouseover',function(){
-//     hideProd_div()
-//     hideRes_div()
-//     dropdown_div.style.display = 'none'
-// })
