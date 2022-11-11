@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+#nav {
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
 #navbar {
     background-color: whitesmoke;
     display: flex;
@@ -35,12 +44,17 @@
     width: 50%;
     justify-content: space-around;
     align-items: center;
-    margin-left: -50px;
+}
+
+#nav_right>div {
+    cursor: pointer;
 }
 
 #nav_right {
-    border: 2px solid blue;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
 }
 
 #logo>img {
@@ -101,6 +115,47 @@
     cursor: pointer;
     color: 373449;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+#profile_dropdown:hover .dropdown_content {
+    display: flex;
+}
+
+.dropdown_content {
+    position: absolute;
+    right: 20px;
+    width: 280px;
+    border: 6px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    display: none;
+    background-color: rgb(245, 245, 245);
+}
+
+#prof_header {
+    display: flex;
+    align-items: center;
+}
+
+#prof_img {
+    margin-right: 20px;
+}
+
+#prof_other>div:hover {
+    text-decoration: underline;
+}
+
+#prof_other>div>span {
+    margin: auto 20px;
+}
+
+#prof_other>div {
+    margin: 10px auto;
+    height: 30px;
+    color: rgb(39, 39, 39);
     display: flex;
     align-items: center;
 }
