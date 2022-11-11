@@ -87,3 +87,12 @@ hds1.onclick = () => {
    drpdown.style.display = 'none'
 
  })
+ 
+let cmpre1 = document.getElementById('cmpre_plans')
+cmpre1.onclick= function(){
+    window.location.href='../pricing_page/pricing.html'
+}
+let cmpre2 = document.getElementById('cmpre_plans_r')
+cmpre2.onclick=function(){
+  window.location.href = '../pricing_page/pricing.html'
+}
