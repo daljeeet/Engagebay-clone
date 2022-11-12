@@ -54,8 +54,6 @@ class User{
     }
 }
 let register = new User()
-// register.signup('daljeet','daljeet@singh','daljeet1234','daljeet','213490323','hello')
-
 let signupBtn = document.getElementById('login_btn')
 signupBtn.onclick=function(){
     let name = document.getElementById('name').value;
@@ -64,14 +62,55 @@ signupBtn.onclick=function(){
     let password = document.getElementById('password').value;
     let mobile = Math.floor(Math.random()*100000).toString();
     let desc = (Math.random() *23).toString(36).substring(7);
-
-    register.signup(name,url,password,username,mobile,desc)
+    if(username.length>4 && (password.length>7) && chkLower(password) && chkUppercase(password) && chkNum(password)&& password.includes('@')|| password.includes('.')|| password.includes('/')|| password.includes('#')|| password.includes('%')){
+        register.signup(name,url,password,username,mobile,desc)  
+    }else{
+        let error = document.getElementById('err_msg')
+        error.style.display = 'block'
+        setTimeout(() => {
+            error.style.display = 'none'
+        }, 3000);
+    }
      document.getElementById('name').value=''
     document.getElementById('username').value=''
      document.getElementById('url').value=''
      document.getElementById('password').value=''
-     Math.floor(Math.random()*100000).toString()=''
-     (Math.random() *23).toString(36).substring(7)=''
+}
+function chkUppercase(string){
+    let i=0;
+    let char = ''
+    while(i<string.length){
+        char = string[i];
+        if(char===char.toUpperCase()){
+            return true;
+        }
+        i++
+    }
+    return false;
+}
+function chkLower(string){
+    let i=0;
+    let char = ''
+    while(i<string.length){
+        char = string[i];
+        if(char===char.toLowerCase()){
+            return true;
+        }
+        i++
+    }
+    return false
+}
+function chkNum(string){
+    let i=0;
+    let char = ''
+    while(i<string.length){
+        char = string[i];
+        if(!isNaN(char*1)){
+            return true;
+        }
+        i++
+    }
+    return false;
 }
 
 function signupStatus(data){
