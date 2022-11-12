@@ -64,6 +64,7 @@ signupBtn.onclick=function(){
     let password = document.getElementById('password').value;
     let mobile = Math.floor(Math.random()*100000).toString();
     let desc = (Math.random() *23).toString(36).substring(7);
+
     register.signup(name,url,password,username,mobile,desc)
      document.getElementById('name').value=''
     document.getElementById('username').value=''
