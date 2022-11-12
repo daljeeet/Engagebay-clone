@@ -22,6 +22,7 @@ document.getElementById("deal_cancel").onclick = () => {
 };
 
 document.getElementById("deal_submit").onclick = () => {
+  document.getElementById("Deals").style.display = "none";
   let obj = {
     ID: document.getElementById("dealID").value,
     Name: document.getElementById("dealName").value,
@@ -34,12 +35,7 @@ document.getElementById("deal_submit").onclick = () => {
     Owner: document.getElementById("dealOwner").value,
     Company: document.getElementById("dealCompany").value,
   };
-
-  let arr = JSON.parse(localStorage.getItem("deals")) || [];
-
-  arr.push(obj);
-
-  localStorage.setItem("deals", JSON.stringify(arr));
+  deals_data(obj);
 
   document.getElementById("dealID").value = null;
   document.getElementById("dealName").value = null;
@@ -50,7 +46,22 @@ document.getElementById("deal_submit").onclick = () => {
   document.getElementById("dealTag").value = null;
   document.getElementById("dealOwner").value = null;
   document.getElementById("dealCompany").value = null;
-  console.log(arr);
+};
+let deals_data = async (obj) => {
+  try {
+    let url = `https://likeable-grass-gymnast.glitch.me/deals`;
+    let res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(obj),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let data = await res.json();
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 document.getElementById("ticket_close").onclick = () => {
@@ -71,6 +82,7 @@ document.getElementById("ticket_cancel").onclick = () => {
 };
 
 document.getElementById("ticket_submit").onclick = () => {
+  document.getElementById("tickets").style.display = "none";
   let obj = {
     Name: document.getElementById("ticketName").value,
     Email: document.getElementById("ticketEmail").value,
@@ -78,18 +90,28 @@ document.getElementById("ticket_submit").onclick = () => {
     Assignee: document.getElementById("ticketAssignee").value,
     input: document.getElementById("input").value,
   };
-
-  let arr = JSON.parse(localStorage.getItem("tickets")) || [];
-
-  arr.push(obj);
-
-  localStorage.setItem("tickets", JSON.stringify(arr));
-
+  ticketsData(obj);
   document.getElementById("ticketName").value = null;
   document.getElementById("ticketEmail").value = null;
   document.getElementById("ticketSubject").value = null;
   document.getElementById("ticketAssignee").value = null;
   document.getElementById("input").value = null;
+};
+
+let ticketsData = async (data) => {
+  try {
+    let res = await fetch(`https://likeable-grass-gymnast.glitch.me/tickets`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let dta = await res.json();
+    console.log(dta);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 document.getElementById("mark_landing_pg").onclick = () => {
@@ -105,6 +127,7 @@ document.getElementById("task_cancel").onclick = () => {
 };
 
 document.getElementById("task_submit").onclick = () => {
+  document.getElementById("tasks").style.display = "none";
   let obj = {
     Name: document.getElementById("taskName").value,
     Type: document.getElementById("taskType").value,
@@ -116,59 +139,84 @@ document.getElementById("task_submit").onclick = () => {
     Status: document.getElementById("taskStatus").value,
     Owner: document.getElementById("taskOwner").value,
   };
+  taskData(obj);
+  document.getElementById("taskName").value = null;
+  document.getElementById("taskType").value = null;
+  document.getElementById("taskPriority").value = null;
+  document.getElementById("dueDate").value = null;
+  document.getElementById("taskNotes").value = null;
+  document.getElementById("taskContacts").value = null;
+  document.getElementById("taskCompany").value = null;
+  document.getElementById("taskStatus").value = null;
+  document.getElementById("taskOwner").value = null;
+};
 
-  let arr = JSON.parse(localStorage.getItem("tasks")) || [];
+let taskData = async (data) => {
+  try {
+    let res = await fetch(`https://likeable-grass-gymnast.glitch.me/tasks`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let dta = await res.json();
+    console.log(dta);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
-  arr.push(obj);
+document.getElementById("web_close").onclick = () => {
+  document.getElementById("webRule").style.display = "none";
+};
 
-  localStorage.setItem("tasks", JSON.stringify(arr));
+document.getElementById("mark_temp").onclick = () => {
+  document.getElementById("webRule").style.display = "flex";
+};
 
-  document.getElementById("taskName").value=null
-  document.getElementById("taskType").value=null
-  document.getElementById("taskPriority").value=null
-  document.getElementById("dueDate").value=null
-  document.getElementById("taskNotes").value=null
-  document.getElementById("taskContacts").value=null
-  document.getElementById("taskCompany").value=null
-  document.getElementById("taskStatus").value=null
-  document.getElementById("taskOwner").value=null
-};  
+document.getElementById("web_cancel").onclick = () => {
+  document.getElementById("webRule").style.display = "none";
+};
 
-document.getElementById('web_close').onclick=()=>{
-   document.getElementById('webRule').style.display="none";
-}
+document.getElementById("web_submit").onclick = () => {
+  document.getElementById("webRule").style.display = "none";
+  let obj = {
+    name: document.getElementById("webName").value,
+    condition: document.getElementById("webCondition").value,
+    contain: document.getElementById("webContains").value,
+    value: document.getElementById("webValue").value,
+    rule: document.getElementById("webRules").value,
+    action: document.getElementById("webAction").value,
+    desc: document.getElementById("webDesc").value,
+  };
 
-document.getElementById('mark_temp').onclick=()=>{
-    document.getElementById('webRule').style.display="flex";
-}
+  webRulesDta(obj);
 
-document.getElementById("web_cancel").onclick=()=>{
-    document.getElementById('webRule').style.display="none";
-}
+  document.getElementById("webName").value = null;
+  document.getElementById("webCondition").value = null;
+  document.getElementById("webContains").value = null;
+  document.getElementById("webValue").value = null;
+  document.getElementById("webRules").value = null;
+  document.getElementById("webAction").value = null;
+  document.getElementById("webDesc").value = null;
+};
 
-document.getElementById('web_submit').onclick=()=>{
-    let obj={
-        name:document.getElementById('webName').value,
-        condition:document.getElementById('webCondition').value,
-        contain:document.getElementById('webContains').value,
-        value:document.getElementById('webValue').value,
-        rule:document.getElementById('webRules').value,
-        action:document.getElementById('webAction').value,
-        desc:document.getElementById('webDesc').value,
-    }
-
-    let arr = JSON.parse(localStorage.getItem("webRule")) || [];
-
-    arr.push(obj);
-  
-    localStorage.setItem("webRule", JSON.stringify(arr));
-
-    document.getElementById('webName').value=null
-    document.getElementById('webCondition').value=null
-    document.getElementById('webContains').value=null
-    document.getElementById('webValue').value=null
-    document.getElementById('webRules').value=null
-    document.getElementById('webAction').value=null
-    document.getElementById('webDesc').value=null
-
-}
+let webRulesDta = async (data) => {
+  try {
+    let res = await fetch(
+      `https://likeable-grass-gymnast.glitch.me/web_rules`,
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    let dta = await res.json();
+    console.log(dta);
+  } catch (err) {
+    console.log(err);
+  }
+};
