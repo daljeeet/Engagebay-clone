@@ -60,7 +60,7 @@ logouuBtn.onclick = function(){
 
 let logo = document.getElementById('logo')
 logo.onclick = function(){
-    // window.location.href = ''
+    // window.location.href = '../landing_page/index.html'
 }
 
 let sales  = document.getElementById('sales_page')

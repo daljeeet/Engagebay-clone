@@ -1,9 +1,11 @@
 
-// import navbar from "./components/navbar.js"
+import navbar from "../components/nav.js"
 
-// let nav=document.getElementById("navbar")
-// nav.innerHTML=navbar()
-
+import foot from '../components/foot.js'
+let nav=document.getElementById("navbar")
+nav.innerHTML=navbar()
+let footer = document.getElementById('bottom')
+footer.innerHTML=foot()
 
 
 let div1 = document.getElementById('one')
@@ -62,7 +64,7 @@ let price3 = [
   'Uptime SLA',
   'Phone Support',
 ]
-let name = ['FREE', 'BASIC', 'GROWTH', 'PRO']
+let nme = ['FREE', 'BASIC', 'GROWTH', 'PRO']
 let arr1 = [price0, price1, price2, price3]
 let arr = [div1, div2, div3, div4]
 
@@ -71,7 +73,7 @@ let Plan_price = ['0', '14.99', '49.99', '99.99']
 for (let i = 0; i < 4; i++) {
   let child0 = document.createElement('div')
   child0.innerHTML = `
-<div class="show_worth center">${name[i]}</div>
+<div class="show_worth center">${nme[i]}</div>
 <div class="actual_price1"><p class="actual_price center">$<span>${Plan_price[i]}</></p></div>
 <p class="month center">per user / month</p>
 `
@@ -117,7 +119,7 @@ for (let el of image_container) {
   el.append(image)
 }
 
-function append(give_arr, div_give) {
+function append1(give_arr, div_give) {
   let heads = document.createElement('p')
   heads.className = 'list_names'
   heads.innerText = give_arr[0]
@@ -266,19 +268,19 @@ function apped2(put_div, price, name) {
   let d2 = document.createElement('div')
 
   let div_first = document.createElement('div')
-  append(marketing, div_first)
+  append1(marketing, div_first)
 
   let div_second = document.createElement('div')
-  append(crm, div_second)
+  append1(crm, div_second)
 
   let div_third = document.createElement('div')
-  append(service, div_third)
+  append1(service, div_third)
 
   let div_fourth = document.createElement('div')
-  append(specials, div_fourth)
+  append1(specials, div_fourth)
 
   let div_fivth = document.createElement('div')
-  append(support, div_fivth)
+  append1(support, div_fivth)
 
   d2.append(div_first, div_second, div_third, div_fourth, div_fivth)
 
@@ -302,25 +304,25 @@ apped2(div_two, 11.99, 'BASIC')
 apped2(div_three, 39.99, 'GROWTH')
 apped2(div_four, 79.99, 'PRO')
 
-const value = (num, num2, arr) => {
-  let list = arr[num].children[1].childNodes
-  for (let i = 0; i < list.length; i++) {
-    if (i > num2) {
-      list[i] = list[i].childNodes[3]
-      list[i].className = 'cut_off'
-    }
-  }
-}
+// const value = (num, num2, arr) => {
+//   let list = arr[num].children[1].childNodes
+//   for (let i = 0; i < list.length; i++) {
+//     if (i > num2) {
+//       list[i] = list[i].childNodes[3]
+//       list[i].className = 'cut_off'
+//     }
+//   }
+// }
 
 const cut_off = (num_arr, div_arr) => {
   for (let m = 0; m < 5; m++) {
-    value(m, num_arr[m], div_arr)
+    // value(m, num_arr[m], div_arr)
   }
 }
 
 let div_arr1 = document.querySelectorAll('#number_one>div+div>div')
 let num1 = [25, 14, 2, 0, 0]
-cut_off(num1, div_arr1)
+// cut_off(num1, div_arr1)
 
 let div_arr2 = document.querySelectorAll('#number_two>div+div>div')
 let num2 = [25, 16, 9, 0, 0]
