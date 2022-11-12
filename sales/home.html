@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="jquery.cleditor.css">
     <title>Dashboard</title>
     <link rel="icon" type="image/x-icon" href="https://cdn5.engagebay.com/images/256x256.png">
     <!-- <link rel="stylesheet" href="/sales/styles/sales-nav.css"> -->
@@ -120,8 +122,183 @@
         </div>
     </div>
 
+    <div class="modals" id="Deals">
+        <div>
+            <div>
+                <h2>New Deal</h2>
+                <p><i class="fa-solid fa-xmark" id="deal_close"></i></p>
+            </div>
+
+            <div class="form">
+                <label for="">Deal ID</label>
+                <input type="number" placeholder="Deal ID" id="dealID">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Deal Name" id="dealName">
+                <label for="desc">Description</label>
+                <input type="text" placeholder="Description" id="dealDesc">
+                <label for="amount">Amount</label>
+                <div class="das">
+                    <select id="dealSlct">
+                        <option value="USD">USD ($)</option>
+                        <option value="AED">AED (AED)</option>
+                        <option value="ARS">ARS ($)</option>
+                        <option value="ANG">ANG (f)</option>
+                        <option value="AUD">AUD ($)</option>
+                        <option value="BHD">BHD (BD)</option>
+                        <option value="BND">BND ($)</option>
+                        <option value="BOB">BOB ($b)</option>
+                        <option value="BRL">BRL (R$)</option>
+                        <option value="BWP">BWP (P)</option>
+                        <option value="BYN">BYN (p.)</option>
+                        <option value="CAD">CAD ($)</option>
+                        <option value="CHF">CHF ($)</option>
+                        <option value="CLP">CLP ($)</option>
+                        <option value="DKK">DKK (kr)</option>
+                        <option value="DOP">DOP (RD$)</option>
+                        <option value="DZD">DZD (DA) ($)</option>
+                        <option value="EEK">EEK (kr)</option>
+                    </select>
+                    <input type="number" placeholder="Deal Amount" id="dealAmount">
+                </div>
+                <label for="clsDate">Closed Date</label>
+                <input type="datetime-local" placeholder="Close Date" id="closeDate">
+                <label for="">Note</label>
+                <input type="text" id="dealNote">
+                <label for="">Tags</label>
+                <input type="text" placeholder="Multiple tag names separated by comma" id="dealTag">
+                <label for="">Owner</label>
+                <input type="email" placeholder="Owner Email" id="dealOwner">
+                <label for="">Companies</label>
+                <input type="text" placeholder="Enter Company" id="dealCompany">
+            </div>
+            <div>
+                <button class="cancel" id="deal_cancel">Cancel</button>
+                <button class="submit" id="deal_submit">Submit</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="tickets" class="modal-ticket">
+        <div>
+            <div>
+                <h2>New Ticket</h2>
+                <p><i class="fa-solid fa-xmark" id="ticket_close"></i></p>
+            </div>
+            <div id="ticket_forms">
+                <p>To</p>
+                <input type="text" placeholder="Enter Contact Name/Email" id="ticketName">
+                <p>CC</p>
+                <input type="text" placeholder="Enter Email Address" id="ticketEmail">
+                <p>Subject</p>
+                <input type="text" id="ticketSubject">
+                <p>Assignee</p>
+                <input type="text" id="ticketAssignee" placeholder="Enter Assignee Name">
+                <p>Message</p>
+                <textarea name="input" id="input" placeholder="Enter your message here...."></textarea>
+
+            </div>
+            <div>
+                <button id="ticket_cancel">Cancel</button>
+                <button id="ticket_submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modals" id="tasks">
+        <div>
+            <div>
+                <h2>Create Task</h2>
+                <p><i class="fa-solid fa-xmark" id="task_close"></i></p>
+            </div>
+
+            <div class="form">
+                <label>Name</label>
+                <input type="text" placeholder="Task name" id="taskName">
+                <label for="">Type</label>
+                <select id="taskType">
+                    <option value="Todo">Todo</option>
+                    <option value="Call">Call</option>
+                    <option value="Email">Email</option>
+                </select>
+                <label for="">Priority</label>
+                <select id="taskPriority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <label>Due Date</label>
+                <input type="datetime-local" placeholder="Due Date" id="dueDate">
+                <label for="">Notes</label>
+                <input type="text" placeholder="This is all about your task details" id="taskNotes">
+                <label for="">Contacts</label>
+                <input type="number" placeholder="Enter Contact Name/Email" id="taskContacts">
+                <label for="">Companies</label>
+                <input type="text" placeholder="Enter Company" id="taskCompany">
+                <label for="">Status</label>
+                <select id="taskStatus">
+                    <option value="Not Started">Not Started</option>
+                    <option value="in Progress">in Progress</option>
+                    <option value="Waiting">Waiting</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Deferred">Deferred</option>
+                </select>
+                <label for="">Owner</label>
+                <input type="text" placeholder="Enter Owner Name" id="taskOwner">
+            </div>
+            <div>
+                <button class="cancel" id="task_cancel">Cancel</button>
+                <button class="submit" id="task_submit">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div id="webRule" class="modal-ticket">
+        <div>
+            <div>
+                <h2>Create Web Rule</h2>
+                <p><i class="fa-solid fa-xmark" id="web_close"></i></p>
+            </div>
+            <div id="ticket_forms">
+                <p>Name</p>
+                <input type="text" placeholder="Name" id="webName">
+                <p>Condition</p>
+                <p><b>And Group</b></p>
+                <p>Meet all of the following condition</p>
+                <select  id="webCondition">
+                    <option value="Page URL">Page URL</option>
+                    <option value="Frequency">Frequency</option>
+                    <option value="Device">Device</option>
+                </select><br>
+                <select id="webContains">
+                    <option value="Contains">Contains</option>
+                    <option value="Doesn't Contain">Doesn't Contain</option>
+                    <option value="is">is</option>
+                    <option value="is not">is not</option>
+                </select>
+                <input type="text" placeholder="Enter Value" id="webValue">
+                <p>Rule</p>
+                <input type="text" id="webRules" placeholder="Write rule here">
+                <p>Action</p>
+                <select id="webAction">
+                    <option value="Choose Action">Choose Action</option>
+                    <option value="Show Productive Message">Choose Action</option>
+                    <option value="Hide Live Chat">Hide Live Chat</option>
+                </select>
+                <p>Description</p>
+                <textarea name="input" id="webDesc" placeholder="Enter description here....."></textarea>
+
+            </div>
+            <div>
+                <button id="web_cancel">Cancel</button>
+                <button id="web_submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
 <script type="module" src="home.js"></script>
 <script type="module" src="../login_nav/login_nav.js"></script>
+<script src="jquery.cleditor.min.js"></script>
