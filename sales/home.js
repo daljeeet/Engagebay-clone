@@ -1,10 +1,3 @@
-import nav from "../components/login_nav.js"
-let navbar = document.getElementById('nav')
-navbar.innerHTML = nav('Sales','Contacts','Deals','Tasks','Automations','Calendar')
-
-
-
-
 
 let color_arr=["Blue","Brown","Cyan","Gold","Green","Grey","Maroon","Orange","Pink","Purple","Red","Magenta","Peach","Teal"]
 
