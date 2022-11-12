@@ -5,119 +5,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="https://cdn5.engagebay.com/images/256x256.png">
+    <title>Sales</title>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous">
+    </script>
+   
+<!-- font added  -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+
     <!-- <link rel="stylesheet" href="/sales/styles/sales-nav.css"> -->
     <link rel="stylesheet" href="../login_nav/loginnav.css">
     <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-    <div id="nav">
-    </div>
+    <div id="nav"></div>
+
+<div id="big_div">
+    <button id="close">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+</div>
+
     <div id="sales_cards">
-        <div id="starterCard">
 
-        </div>
-        <div>
 
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-14.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Total Appointments</h3>
-                <p>Duration:This Month</p>
+        <!-- 1 -->
+        <div id="starterCard">  
+            <h3>Dashboard </h3>
+             
+            <div id="show_count">
+
+            <div><p class="total_count">0</p><p>Contacts</p></div>
+            <div><p class="total_count">0</p><p>Deals</p></div>
+            <div><p class="total_count">0</p><p>Tasks</p></div>
+            <div><p class="total_count">0</p><p>Automations</p></div>
+            <div><p class="total_count">0</p><p>Calender</p></div>
+            
             </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg" alt="">
+            
         </div>
-        <div>
+
+        <!-- 2 -->
+        <div class="boxes">
             <div>
-                <h3>Productivity</h3>
-                <p>Duration: This Month</p>
+                <h3>Contacts <span><i class="fa-solid fa-address-book"></i></span></h3>
+                <p>See your contacts here</p>
             </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-11.svg" alt="">
+
+        
+        
+        
+            <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-14.svg" alt=""> -->
         </div>
-        <div>
+
+        <!-- 3 -->
+        <div class="boxes boxes2" >
             <div>
-                <h3>Closed Deals</h3>
+                <h3>Deals
+                <span><i class="fa-solid fa-tag"></i></span>
+                </h3>
+                <p>Deals in this Month</p>
+            </div>
+            <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg" alt=""> -->
+        </div>
+
+        <!-- 4 -->
+        <div class="boxes boxes2" >
+            <div>
+                <h3>Tasks
+                    <span><i class="fa-sharp fa-solid fa-laptop-file"></i></span>
+                </h3>
+                <p> See and track your tasks</p>
+            </div>
+            <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-11.svg" alt=""> -->
+        </div>
+
+        <!-- 5 -->
+        <div class="boxes boxes2" >
+            <div>
+                <h3>Automations
+                    <span><i class="fa-solid fa-hard-drive"></i></span>
+                </h3>
                 <p>Track: Default | Duration: This Month</p>
             </div>
+                 <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-5.svg" alt=""> -->
         </div>
-        <div>
+
+        <!-- 6 -->
+        <div class="boxes">
             <div>
-                <h3>Contacts Created by Day</h3>
+                <h3>Calender
+                    <span><i class="fa-solid fa-calendar-days"></i></span>
+                </h3>
                 <p>Track: Default | Frequency: Weekly</p>
             </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-14.svg" alt="">
+            <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-14.svg" alt=""> -->
         </div>
-        <div>
-            <div>
-                <h3>Won vs Lost Deals</h3>
-                <p>Track: Default | Duration: This Month</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-6.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Incomplete Tasks</h3>
-                <p>Date Range: This Month</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-3.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Deals Forecast</h3>
-                <p>Track: Default | Duration: This Month</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-16.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>My Tasks</h3>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Deals Funnel</h3>
-                <p>Track: Default | Duration: This Month</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-8.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Contacts by Source</h3>
-                <p>Duration: This Month</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-16.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Leaderboard</h3>
-                <p>Duration: This Month</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-6.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Sales Performance</h3>
-                <p>Duration: This Year</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-17.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Agents Appointments</h3>
-                <p>Duration: This Month</p>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-5.svg" alt="">
-        </div>
-        <div>
-            <div>
-                <h3>Calls</h3>
-            </div>
-            <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-17.svg" alt="">
-        </div>
+   
     </div>
 
 </body>
@@ -125,3 +109,5 @@
 </html>
 <script type="module" src="home.js"></script>
 <script type="module" src="../login_nav/login_nav.js"></script>
+
+
