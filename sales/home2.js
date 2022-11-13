@@ -9,16 +9,17 @@ navbar.innerHTML = nav(
   'Calendar',
 )
 
+let contact_modal = document.getElementById('Deals')
 document.getElementById('mark_contacts').onclick = () => {
-  document.getElementById('Deals').style.display = 'flex'
+  contact_modal.style.display = 'flex'
 }
 
 document.getElementById('deal_close').onclick = () => {
-  document.getElementById('Deals').style.display = 'none'
+  contact_modal.style.display = 'none'
 }
 
 document.getElementById('deal_cancel').onclick = () => {
-  document.getElementById('Deals').style.display = 'none'
+  contact_modal.style.display = 'none'
 }
 
 document.getElementById('deal_submit').onclick = () => {
@@ -35,7 +36,15 @@ document.getElementById('deal_submit').onclick = () => {
     Owner: document.getElementById('dealOwner').value,
     Company: document.getElementById('dealCompany').value,
   }
-  deals_data(obj)
+ if(obj.Contact==''||obj.Contact==' '||obj.Name==''||obj.Name==' '){
+  contact_modal.style.display = 'flex'
+document.getElementsByClassName('imp_fields')[0].style.color= 'red'
+setTimeout(() => {
+  document.getElementsByClassName('imp_fields')[0].style.color= ''
+}, 3000);
+ }else{
+   deals_data(obj)
+  }
 
   document.getElementById('dealID').value = null
   document.getElementById('dealName').value = null
@@ -64,21 +73,18 @@ let deals_data = async (obj) => {
   }
 }
 
+
+let ticket_modal = document.getElementById('tickets');
 document.getElementById('ticket_close').onclick = () => {
-  document.getElementById('tickets').style.display = 'none'
+  ticket_modal.style.display = 'none'
 }
 
-let btn = document.getElementById('mark_forms')
-btn.onclick = function () {
-  document.getElementById('tickets').style.display = 'flex'
-}
-
-document.getElementById('ticket_close').onclick = () => {
-  document.getElementById('tickets').style.display = 'none'
+document.getElementById('mark_forms').onclick = function () {
+  ticket_modal.style.display = 'flex'
 }
 
 document.getElementById('ticket_cancel').onclick = () => {
-  document.getElementById('tickets').style.display = 'none'
+  ticket_modal.style.display = 'none'
 }
 
 document.getElementById('ticket_submit').onclick = () => {
@@ -90,7 +96,16 @@ document.getElementById('ticket_submit').onclick = () => {
     Assignee: document.getElementById('ticketAssignee').value,
     input: document.getElementById('input').value,
   }
+  if(obj.Assignee==''||obj.Subject==''){
+    ticket_modal.style.display = 'flex'
+document.getElementsByClassName('imp_fields')[1].style.color= 'red'
+setTimeout(() => {
+  document.getElementsByClassName('imp_fields')[1].style.color= ''
+}, 2000);
+}else{
   ticketsData(obj)
+  console.log('hello')
+}
   document.getElementById('ticketName').value = null
   document.getElementById('ticketEmail').value = null
   document.getElementById('ticketSubject').value = null
@@ -114,16 +129,17 @@ let ticketsData = async (data) => {
   }
 }
 
+let task_modal = document.getElementById('tasks')
 document.getElementById('mark_landing_pg').onclick = () => {
-  document.getElementById('tasks').style.display = 'flex'
+  task_modal.style.display = 'flex'
 }
 
 document.getElementById('task_close').onclick = () => {
-  document.getElementById('tasks').style.display = 'none'
+  task_modal.style.display = 'none'
 }
 
 document.getElementById('task_cancel').onclick = () => {
-  document.getElementById('tasks').style.display = 'none'
+  task_modal.style.display = 'none'
 }
 
 document.getElementById('task_submit').onclick = () => {
@@ -139,11 +155,16 @@ document.getElementById('task_submit').onclick = () => {
     Status: document.getElementById('taskStatus').value,
     Owner: document.getElementById('taskOwner').value,
   }
-  taskData(obj)
+  if(obj.Name===''||obj.Name==' '){
+        task_modal.style.display = 'flex'
+    document.getElementsByClassName('imp_fields')[2].style.color= 'red'
+    setTimeout(() => {
+      document.getElementsByClassName('imp_fields')[2].style.color= ''
+    }, 3000);
+  }else{
+    taskData(obj)
+  }
   document.getElementById('taskName').value = null
-  document.getElementById('taskType').value = null
-  document.getElementById('taskPriority').value = null
-  document.getElementById('dueDate').value = null
   document.getElementById('taskNotes').value = null
   document.getElementById('taskContacts').value = null
   document.getElementById('taskCompany').value = null
@@ -167,16 +188,17 @@ let taskData = async (data) => {
   }
 }
 
+let auto_modal  = document.getElementById('webRule')
 document.getElementById('web_close').onclick = () => {
-  document.getElementById('webRule').style.display = 'none'
+  auto_modal.style.display = 'none'
 }
 
 document.getElementById('mark_temp').onclick = () => {
-  document.getElementById('webRule').style.display = 'flex'
+  auto_modal.style.display = 'flex'
 }
 
 document.getElementById('web_cancel').onclick = () => {
-  document.getElementById('webRule').style.display = 'none'
+  auto_modal.style.display = 'none'
 }
 
 document.getElementById('web_submit').onclick = () => {
@@ -218,5 +240,14 @@ let webRulesDta = async (data) => {
     console.log(dta)
   } catch (err) {
     console.log(err)
+  }
+}
+ 
+window.onclick = function(e){
+  if(e.target == auto_modal||e.target==task_modal || e.target==ticket_modal || e.target=== contact_modal ){
+    auto_modal.style.display='none';
+    task_modal.style.display = 'none';
+    ticket_modal.style.display = 'none';
+    contact_modal.style.display = 'none';
   }
 }

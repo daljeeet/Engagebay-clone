@@ -157,5 +157,5 @@ toLogin.onclick = function(){
 
 let logo = document.querySelector('.logo');
 logo.onclick =function(){
- window.location.href = '../landing_page/index.html'
+ window.location.href = '../index.html'
 }

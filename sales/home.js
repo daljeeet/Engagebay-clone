@@ -31,6 +31,7 @@ async function length() {
     boxes_arr[i].innerHTML = data.length
     i++
   }
+  document.getElementById('loader_img').style.display='none'
 }
 
 length()
@@ -39,6 +40,7 @@ contact_fun()
 // forr contact
 async function contact_fun() {
   let parent1 = document.getElementById('contact_div')
+  parent1.innerHTML=''
   let api_name = 'deals'
   let data = await fetch(`https://likeable-grass-gymnast.glitch.me/deals`)
   data = await data.json()
@@ -47,7 +49,7 @@ async function contact_fun() {
     child.className = 'contact_child'
     let grand_child = document.createElement('div')
     grand_child.className = 'content_show'
-    grand_child.addEventListener('click', function (l) {
+    grand_child.addEventListener('click', function () {
       module()
       module_content1(el)
     })
@@ -139,11 +141,14 @@ async function tasks() {
     let child = document.createElement('div')
     child.className = 'tasks_div_child'
     if (el.Priority == 'High') {
-      child.style.backgroundColor = 'red'
+      child.style.backgroundColor = '#FF7342'
+      child.style.color = 'white'
     } else if (el.Priority == 'Medium') {
-      child.style.backgroundColor = 'orange'
+      child.style.backgroundColor = '#ffbd42'
+      child.style.color = 'white'
     } else {
-      child.style.backgroundColor = 'rgb(205, 200, 50)'
+      child.style.backgroundColor = '#a1b302'
+      child.style.color = 'white'
     }
     let grand_div = document.createElement('div')
     grand_div.className = 'long_div_hieght'
@@ -246,18 +251,20 @@ function module_content4(el) {
 let contact_btn = document.getElementById('deal_submit')
 contact_btn.addEventListener('click', function () {
   contact_fun()
+  document.getElementById('loader_img').style.display='flex'
   length()
 })
 
 let tickets_btn = document.getElementById('ticket_submit')
 tickets_btn.onclick = function () {
   tickets()
+  document.getElementById('loader_img').style.display='flex'
   length()
 }
 
-let task_btn = document.getElementById('task_submit')
-task_btn.addEventListener('click', function () {
+document.getElementById('task_submit').addEventListener('click', function () {
   tasks()
+  document.getElementById('loader_img').style.display='flex'
   length()
 })
 
@@ -271,26 +278,9 @@ function module() {
   let modul = document.getElementById('big_div')
   modul.style.display = 'block'
 }
-
-// automation_div
-
-// data3.forEach(function(el,i){
-// let child=document.createElement("div")
-// child.className=""
-// let grand_child=document.createElement("div")
-// grand_child.className=""
-
-// tickets_div
-
-// tasks_div
-// tasks_content_show
-// tasks_div_child
-
-// module()
-//   data_shii3(el)
-
 function remove_dom(child) {
   child.remove()
+  document.getElementById('loader_img').style.display='flex'
 }
 
 async function remove_server(el, id, api_name) {
@@ -306,6 +296,7 @@ async function remove_server(el, id, api_name) {
       },
     )
     length()
+    document.getElementById('loader_img').style.display='none'
   } catch (err) {
     console.log(err)
   }
@@ -339,22 +330,4 @@ function close() {
 //   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-17.svg",
 // ];
 
-// let fff=document.querySelectorAll(".boxes")
 
-// let arr2333=["deals","tickets","tasks","web_rules"]
-// let i=0
-// for(let el of arr2333){
-//    api(el,fff[i])
-// i++
-// }
-
-// function remove(child) {
-//   child.remove();
-// }
-
-// function show() {
-//   let one = document.getElementById("sales_cards");
-//   one.style.display = "none";
-//   let two = document.getElementById("big_div");
-//   two.style.display = "block";
-// }
