@@ -33,10 +33,6 @@
     border-radius: 5px;
     padding: 5px;
 }  */
-
-
-
-
 #sales_cards{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -47,21 +43,124 @@
     margin-bottom: 100px;
 }
 #sales_cards>div{
-    padding: 5%;
     height: 450px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: whitesmoke;
     border-radius: 20px;
-     overflow: scroll;
-     scroll-behavior: smooth;
      transition-duration: 0.2s;
 }
 #sales_cards>div:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition-duration: 0.2s;
-
 }
-#sales_cards>div::-webkit-scrollbar{
+#sales_cards>div>div{
+    padding: 5%;
+}
+.first_child_of_each_div{
+    text-align: center;
+    background-color: rgba(30, 5, 253, 0.136);
+    font-size: 20px;
+    border-radius: 20px 20px 0px 0px;
+}
+#contact_div{
+    padding-bottom: 0 !important;
+    height: 70%;
+    overflow: scroll;
+}
+#contact_div::-webkit-scrollbar{
+    display: none;
+}
+#contact_div>div{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color:rgba(0, 0, 0, 0.059);
+    font-weight: 600;
+}
+#contact_div>div:hover{
+transform: scale(1.05);
+transition-duration: 0.3s;
+cursor: pointer;
+}
+#contact_div i:hover{
+    color: rgba(255, 0, 0, 0.468);
+    cursor: pointer;
+}
+
+
+#contact_div>div p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#contact_div button{
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.content_show{
+    width: 95%;
+}
+
+#form_div{
+ width: 50%;
+ margin: auto;
+  margin-top: 30px;
+  min-height: 600px;
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  padding: 20px;
+  overflow: scroll;
+}
+#form_div h1{
+  color: rgba(25, 23, 23, 0.522);
+  margin-bottom: 30px;
+}
+#form_div p{
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+#form_div::-webkit-scrollbar{
+    display: none !important;
+}
+
+.tickets_div_child{
+    display: flex;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color:rgba(0, 0, 0, 0.059);
+}
+.tickets_div_child:hover{
+transform: scale(1.05);
+transition-duration: 0.3s;
+cursor: pointer;
+}
+
+.tickets_div_child button{
+font-size: 25px;
+background-color: transparent;
+border: none ;
+}
+.tickets_div_child i:hover{
+color: rgba(171, 8, 8, 0.979);
+cursor: pointer;
+}
+
+
+
+#tickets_div{
+    padding-bottom: 20px;
+    overflow: scroll;
+    height: 70%;
+}
+#tickets_div::-webkit-scrollbar{
     display: none;
 }
 
@@ -166,4 +265,88 @@
     color: white;
     background-color: rgba(255, 0, 0, 0.66);
     cursor: pointer;
+}
+
+
+#tasks_div{
+    height: 73%;
+    padding-bottom: 30px;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+#tasks_div::-webkit-scrollbar{
+    display: none;
+}
+
+.tasks_div_child{
+    border-radius: 20px;
+    background-color: bisque;
+    padding: 10px 20px;
+    text-align: center;
+}
+.tasks_div_child:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s; 
+    cursor: pointer;
+}
+.tasks_div_child i:hover{
+    color: rgb(169, 13, 13);
+    cursor: pointer;
+}
+
+.tasks_div_child p{
+    margin-bottom: 5px;
+}
+.tasks_div_child button{
+    float: right;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+}
+.long_div_hieght{
+    margin-top: 30px;
+    font-size: 20px;
+    overflow: hidden;
+}
+#automation_div{
+    height: 73%;
+    padding-bottom: 20px;
+    overflow: scroll;
+}
+#automation_div::-webkit-scrollbar{
+    display: none;
+}
+#automation_div button{
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    padding: 20px;
+}
+
+#automation_div>div{
+    display: flex;
+    border-radius: 30px;
+    cursor: pointer;
+    height:80%;
+    margin-bottom: 20px;
+    background-color: rgba(214, 124, 21, 0.148);
+}
+#automation_div>div:hover{
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+}
+
+#automation_div i:hover{
+    color: rgb(151, 11, 11);
+}
+
+#automation_div>div>div{
+    width: 80%;
+    padding: 20px;
+}
+i:hover{
+    cursor: pointer !important;
 }
