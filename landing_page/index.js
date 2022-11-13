@@ -96,3 +96,28 @@ let cmpre2 = document.getElementById('cmpre_plans_r')
 cmpre2.onclick=function(){
   window.location.href = '../pricing_page/pricing.html'
 }
+
+let logo = document.getElementById('logo')
+logo.addEventListener('click',function(){
+  window.location.href='index.html'
+})
+let blog_btn = document.getElementById('nav_blog')
+blog_btn.onclick = function(){
+    window.location.href = './blog/blog.html'
+}
+let pricing_btn = document.getElementById('nav_pricing')
+pricing_btn.onclick=function(){
+window.location.href='./pricing_page/pricing.html'
+}
+let login_btn = document.getElementById('nav_login')
+login_btn.onclick=function(){
+    window.location.href='./auth/login.html'
+}
+let freeDemoBtn = document.getElementById('nav_free_demo')
+freeDemoBtn.onclick=function(){
+    window.location.href = './auth/signup.html'
+}
+let signupBtn = document.getElementById('nav_free_signup_btn')
+signupBtn.onclick = function(){
+    window.location.href = './auth/signup.html'
+}
