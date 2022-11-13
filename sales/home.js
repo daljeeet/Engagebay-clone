@@ -33,35 +33,39 @@ async function length() {
   }
   document.getElementById('loader_img').style.display='none'
 }
-
-length()
-
-contact_fun()
-// forr contact
 async function contact_fun() {
-  let parent1 = document.getElementById('contact_div')
-  parent1.innerHTML=''
+  try{
+    let res = await fetch(`https://likeable-grass-gymnast.glitch.me/deals`)
+    let data = await res.json();
+    contact_div_append(data)
+  }catch(err){
+    console.log(err)
+  }
+}
+function contact_div_append(data){
+  let parent1 = document.getElementById('contact_div');
   let api_name = 'deals'
-  let data = await fetch(`https://likeable-grass-gymnast.glitch.me/deals`)
-  data = await data.json()
+  length()
   data.forEach(function (el, i) {
     let child = document.createElement('div')
     child.className = 'contact_child'
     let grand_child = document.createElement('div')
-    grand_child.className = 'content_show'
+    grand_child.setAttribute('class','content_show');
+    let btn = document.createElement('button')
+    let name = document.createElement('p')
+    let num = document.createElement('p')
+    name.setAttribute('class','person_name')
+    name.textContent = el.Name
+    num.setAttribute('class','person_number')
+    num.textContent = el.Contact
+    grand_child.append(name,num)
+    btn.innerHTML=`<i class="fa-solid fa-trash"></i>`
+    child.append(grand_child,btn)
+    // here we give two remove function one for server and one dom
     grand_child.addEventListener('click', function () {
       module()
       module_content1(el)
     })
-    grand_child.innerHTML = `
-<p class="person_name">Name: ${el.Name}</p><p class="person_number">Contact: ${el.Contact}</p></div>
-`
-    let btn = document.createElement('button')
-    btn.className = 'remove.btn'
-    btn.innerHTML = `
-<i class="fa-solid fa-trash"></i>
-`
-    // here we give two remove function one for server and one dom
     btn.addEventListener('click', function () {
       remove_dom(child)
       let id = el.id
@@ -71,6 +75,7 @@ async function contact_fun() {
     parent1.append(child)
   })
 }
+
 function module_content1(el) {
   let form33 = document.getElementById('form_div')
   form33.innerHTML = null
@@ -93,6 +98,7 @@ async function tickets() {
   let api_name = 'tickets'
   let data2 = await fetch(`https://likeable-grass-gymnast.glitch.me/tickets`)
   data2 = await data2.json()
+  length()
   data2.forEach(function (el, i) {
     let child = document.createElement('div')
     child.className = 'tickets_div_child'
@@ -119,7 +125,7 @@ async function tickets() {
     parent2.append(child)
   })
 }
-tickets()
+
 function module_content2(el) {
   let form33 = document.getElementById('form_div')
   form33.innerHTML = null
@@ -137,6 +143,7 @@ async function tasks() {
   let api_name = 'tasks'
   let data3 = await fetch(`https://likeable-grass-gymnast.glitch.me/tasks`)
   data3 = await data3.json()
+  length()
   data3.forEach(function (el, i) {
     let child = document.createElement('div')
     child.className = 'tasks_div_child'
@@ -179,7 +186,7 @@ async function tasks() {
     parent2.append(child)
   })
 }
-tasks()
+
 function module_content3(el) {
   let form33 = document.getElementById('form_div')
   form33.innerHTML = null
@@ -196,12 +203,13 @@ function module_content3(el) {
 `
 }
 
-automation()
+
 async function automation() {
   let parent4 = document.getElementById('automation_div')
   let api_name = 'web_rules'
   let data4 = await fetch(`https://likeable-grass-gymnast.glitch.me/web_rules`)
   data4 = await data4.json()
+  length()
   data4.forEach(function (el, i) {
     let child = document.createElement('div')
     child.className = 'automation_div_child'
@@ -248,30 +256,39 @@ function module_content4(el) {
 `
 }
 
+length()
+contact_fun()
+tickets()
+tasks()
+automation()
+
+
+
+
 let contact_btn = document.getElementById('deal_submit')
 contact_btn.addEventListener('click', function () {
-  contact_fun()
   document.getElementById('loader_img').style.display='flex'
-  length()
+  contact_fun()
+  
 })
 
 let tickets_btn = document.getElementById('ticket_submit')
 tickets_btn.onclick = function () {
   tickets()
   document.getElementById('loader_img').style.display='flex'
-  length()
+  
 }
 
 document.getElementById('task_submit').addEventListener('click', function () {
   tasks()
   document.getElementById('loader_img').style.display='flex'
-  length()
+ 
 })
 
 let submit_btn3 = document.getElementById('web_submit')
 submit_btn3.addEventListener('click', function () {
   automation()
-  length()
+  
 })
 
 function module() {
@@ -312,22 +329,5 @@ function close() {
   let two = document.getElementById('big_div')
   two.style.display = 'none'
 }
-
-// let image_arr = [
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-14.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-11.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-14.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-6.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-3.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-16.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-8.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-16.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-6.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-17.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-5.svg",
-//   "https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-17.svg",
-// ];
 
 
