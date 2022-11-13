@@ -304,25 +304,24 @@ apped2(div_two, 11.99, 'BASIC')
 apped2(div_three, 39.99, 'GROWTH')
 apped2(div_four, 79.99, 'PRO')
 
-// const value = (num, num2, arr) => {
-//   let list = arr[num].children[1].childNodes
-//   for (let i = 0; i < list.length; i++) {
-//     if (i > num2) {
-//       list[i] = list[i].childNodes[3]
-//       list[i].className = 'cut_off'
-//     }
-//   }
-// }
+const value = (num, num2, arr) => {
+  let list = arr[num].children[1].childNodes
+  for (let i = 0; i < list.length; i++) {
+    if (i > num2) {
+      list[i].className = 'cut_off'
+    }
+  }
+}
 
 const cut_off = (num_arr, div_arr) => {
   for (let m = 0; m < 5; m++) {
-    // value(m, num_arr[m], div_arr)
+    value(m, num_arr[m], div_arr)
   }
 }
 
 let div_arr1 = document.querySelectorAll('#number_one>div+div>div')
 let num1 = [25, 14, 2, 0, 0]
-// cut_off(num1, div_arr1)
+cut_off(num1, div_arr1)
 
 let div_arr2 = document.querySelectorAll('#number_two>div+div>div')
 let num2 = [25, 16, 9, 0, 0]
@@ -465,4 +464,8 @@ freeDemoBtn.onclick=function(){
 let signupBtn = document.getElementById('nav_free_signup_btn')
 signupBtn.onclick = function(){
     window.location.href = '../auth/signup.html'
+}
+
+for(let el of linee){
+  el.style.textDecoration="line-through"
 }
