@@ -67,7 +67,6 @@ let deals_data = async (obj) => {
       },
     })
     let data = await res.json()
-    console.log(data)
   } catch (err) {
     console.log(err)
   }
@@ -104,7 +103,6 @@ setTimeout(() => {
 }, 2000);
 }else{
   ticketsData(obj)
-  console.log('hello')
 }
   document.getElementById('ticketName').value = null
   document.getElementById('ticketEmail').value = null
@@ -123,7 +121,6 @@ let ticketsData = async (data) => {
       },
     })
     let dta = await res.json()
-    console.log(dta)
   } catch (err) {
     console.log(err)
   }
@@ -182,7 +179,6 @@ let taskData = async (data) => {
       },
     })
     let dta = await res.json()
-    console.log(dta)
   } catch (err) {
     console.log(err)
   }
@@ -237,7 +233,6 @@ let webRulesDta = async (data) => {
       },
     )
     let dta = await res.json()
-    console.log(dta)
   } catch (err) {
     console.log(err)
   }
