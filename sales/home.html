@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home2.css">
-    <title>Sales</title>
+    <title>Dashboard</title>
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous">
     </script>
 
@@ -32,14 +32,16 @@
             <img src="https://i.stack.imgur.com/hzk6C.gif" alt="">
         </div>
     </div>
-    <div id="sales_cards">
+    <div id="dashbord_main">
         <!-- 1 -->
         <div id="starterCard">
-            <h3 id="dashboard_heading">Dashboard </h3>
+            <div id="dashbord_header">
+                <h3 id="dashboard_heading">Dashboard <span><i class="fa-solid fa-chart-pie"></i></span> </h3>
+                <p> Your statistics </p>
+            </div>
             <div id="show_count">
-
                 <div>
-                    <p class="total_count" id="dash_contacts"></p>
+                    <p class="total_count" id="dash_contacts">0</p>
                     <p>Contacts</p>
                 </div>
                 <div>
@@ -54,53 +56,59 @@
                     <p class="total_count" id="dash_auto">0</p>
                     <p>Automations</p>
                 </div>
+                <div>
+                    <p class="total_count" id="dash_auto">5</p>
+                    <p>Importent Days</p>
+                </div>
 
             </div>
 
         </div>
 
-        <!-- 2 -->
-        <div>
-            <div class="first_child_of_each_div">
-                <h3>Contacts <span><i class="fa-solid fa-address-book"></i></span></h3>
-                <p>See your contacts here</p>
+        <div id="dashbord_cards">
+            <!-- 2 -->
+            <div id="contact_card">
+                <div id="contacts_header" class="first_child_of_each_div">
+                    <h3>Contacts <span><i class="fa-solid fa-address-book"></i></span></h3>
+                    <p>See your contacts here</p>
+                </div>
+                <div id="contact_data" class="card_content">
+                    <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg" alt="">
+                </div>
             </div>
-            <div id="contact_div">
 
+            <!-- 3 -->
+            <div id="tickets_card">
+                <div id="tickets_header" class="first_child_of_each_div">
+                    <h3>Tickets<span><i class="fa-solid fa-tag"></i></span></h3>
+                    <p>Tickets this Month</p>
+                </div>
+                <div class="card_content" id="tickets_div">
+                    <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg" alt="">
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div>
+                <div id="tasks_header" class="first_child_of_each_div">
+                    <h3>Tasks <span><i class="fa-sharp fa-solid fa-laptop-file"></i></span></h3>
+                    <p>See and track your tasks</p>
+                </div>
+                <div class="card_content" id="tasks_div">
+                </div>
+                <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-11.svg" alt="">
+            </div>
+            <!-- 5 -->
+            <div>
+                <div id="auto_header" class="first_child_of_each_div">
+                    <h3>Automations <span><i class="fa-solid fa-hard-drive"></i></span></h3>
+                    <p>Track: Default | Duration: This Month</p>
+                </div>
+                <div class="card_content" id="automation_div">
+                    <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-5.svg" alt="">
+                </div>
             </div>
         </div>
-
-
-        <!-- 3 -->
-        <div>
-            <div class="first_child_of_each_div">
-                <h3>Tickets<span><i class="fa-solid fa-tag"></i></span></h3>
-                <p>Tickets this Month</p>
-            </div>
-            <div id="tickets_div"></div>
-            <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-13.svg" alt=""> -->
-        </div>
-
-        <!-- 4 -->
-        <div>
-            <div class="first_child_of_each_div">
-                <h3>Tasks <span><i class="fa-sharp fa-solid fa-laptop-file"></i></span></h3>
-                <p>See and track your tasks</p>
-            </div>
-            <div id="tasks_div"></div>
-            <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-11.svg" alt=""> -->
-        </div>
-
-        <!-- 5 -->
-        <div>
-            <div class="first_child_of_each_div">
-                <h3>Automations <span><i class="fa-solid fa-hard-drive"></i></span></h3>
-                <p>Track: Default | Duration: This Month</p>
-            </div>
-            <div id="automation_div"></div>
-            <!-- <img src="https://d2p078bqz5urf7.cloudfront.net/cloud/assets/themev2/img/no-data-images/C-5.svg" alt=""> -->
-        </div>
-
     </div>
 
     <!-- ############################################# -->
@@ -180,7 +188,7 @@
                 <p>Assignee *</p>
                 <input type="text" id="ticketAssignee" placeholder="Enter Assignee Name">
                 <p>Message</p>
-                <textarea name="input" id="input" placeholder="Enter your message here...."></textarea>
+                <textarea name="input" id="input_desc" placeholder="Enter your message here...."></textarea>
 
             </div>
             <div>
@@ -284,6 +292,7 @@
 </body>
 
 </html>
-<script type="module" src="home.js"></script>
+<!-- <script type="module" src="home.js"></script>-->
 <script type="module" src="home2.js"></script>
+<script src="./dashbord.js" type="module"></script>
 <script type="module" src="../login_nav/login_nav.js"></script>

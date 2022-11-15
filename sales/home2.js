@@ -67,6 +67,7 @@ let deals_data = async (obj) => {
       },
     })
     let data = await res.json()
+    console.log(data)
   } catch (err) {
     console.log(err)
   }
@@ -87,7 +88,6 @@ document.getElementById('ticket_cancel').onclick = () => {
 }
 
 document.getElementById('ticket_submit').onclick = () => {
-  document.getElementById('tickets').style.display = 'none'
   let obj = {
     Name: document.getElementById('ticketName').value,
     Email: document.getElementById('ticketEmail').value,
@@ -95,14 +95,16 @@ document.getElementById('ticket_submit').onclick = () => {
     Assignee: document.getElementById('ticketAssignee').value,
     input: document.getElementById('input').value,
   }
+  console.log(obj)
   if(obj.Assignee==''||obj.Subject==''){
     ticket_modal.style.display = 'flex'
-document.getElementsByClassName('imp_fields')[1].style.color= 'red'
-setTimeout(() => {
-  document.getElementsByClassName('imp_fields')[1].style.color= ''
-}, 2000);
-}else{
-  ticketsData(obj)
+    document.getElementsByClassName('imp_fields')[1].style.color= 'red'
+    setTimeout(() => {
+      document.getElementsByClassName('imp_fields')[1].style.color= ''
+    }, 2000);
+  }else{
+    ticketsData(obj)
+    ticket_modal.style.display = 'none'
 }
   document.getElementById('ticketName').value = null
   document.getElementById('ticketEmail').value = null
@@ -121,6 +123,7 @@ let ticketsData = async (data) => {
       },
     })
     let dta = await res.json()
+    console.log(dta)
   } catch (err) {
     console.log(err)
   }

@@ -42,8 +42,9 @@ async function contact_fun() {
     console.log(err)
   }
 }
+let parent1 = document.getElementById('contact_div');
 function contact_div_append(data){
-  let parent1 = document.getElementById('contact_div');
+  parent1.innerHTML = null;
   let api_name = 'deals'
   length()
   data.forEach(function (el, i) {
@@ -269,7 +270,6 @@ let contact_btn = document.getElementById('deal_submit')
 contact_btn.addEventListener('click', function () {
   document.getElementById('loader_img').style.display='flex'
   contact_fun()
-  
 })
 
 let tickets_btn = document.getElementById('ticket_submit')
